@@ -8,6 +8,26 @@
 		android:label="@string/app_name"
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:supportsRtl="true"
-		android:theme="@style/Theme" />
+		android:theme="@style/Theme">
+
+		<activity
+			android:name=".ImageWidgetConfigureActivity"
+			android:exported="true">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+			</intent-filter>
+		</activity>
+
+		<receiver
+			android:name=".ImageWidgetProvider"
+			android:exported="true">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+			</intent-filter>
+			<meta-data
+				android:name="android.appwidget.provider"
+				android:resource="@xml/provider_imagewidget"/>
+		</receiver>
+	</application>
 
 </manifest>
