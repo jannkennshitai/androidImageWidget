@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">ImageWidget</string>
+
+	<string name="toast_fail_load_image">Failed to load the image</string>
 </resources>
